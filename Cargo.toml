@@ -3,7 +3,11 @@ name = "apply_if"
 version = "1.0.0"
 license = "MIT OR Apache-2.0"
 description = "Conditionally apply a closure to an item or return it"
-repository = ""
+repository = "https://github.com/bavalpey/apply_if"
+keywords = ["apply_if", "map_if", "do_if", "filter_if", "no-std"]
+categories = ["development-tools", "no-std"]
+authors = ["Benjamin Valpey <bavalpey@gmail.com>"]
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

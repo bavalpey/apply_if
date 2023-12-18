@@ -5,7 +5,7 @@
 //! Very useful for the builder pattern when you want to keep the nice ``.builder1().builder2()``
 //! chain, and not interrupt it with if-else blocks.
 //!
-//! //! Comes with a blanket implementatino for all sized types.
+//! //! Comes with a blanket implementation for all sized types.
 
 /// The ApplyIf trait only works for Sized objects.
 pub trait ApplyIf: Sized {
