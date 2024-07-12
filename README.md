@@ -1,4 +1,5 @@
-## ApplyIf
+# ApplyIf
+[![CI](https://github.com/bavalpey/apply_if/actions/workflows/tests.yml/badge.svg)](https://github.com/bavalpey/apply_if/actions/workflows/tests.yml)
 
 ApplyIf supplies a trait with two methods: ``apply_if(cond, closure)`` and
 ``apply_if_mut(cond,closure)``. Those applies the given closure
