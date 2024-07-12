@@ -67,6 +67,7 @@ impl<T> ApplyIf for T {
         }
     }
 
+    #[inline]
     fn apply_if_mut<F>(&mut self, cond: bool, f: F) -> &mut Self
     where
         F: Fn(&mut Self) -> &mut Self,
