@@ -6,7 +6,9 @@
 //! chain, and not interrupt it with if-else blocks. It works for both the
 //! immutable builder pattern and the mutable builder pattern.
 //!
-//! //! Comes with a blanket implementation for all sized types.
+//! Comes with a blanket implementation for all types
+
+#![no_std]
 
 #[cfg(test)]
 mod test;
