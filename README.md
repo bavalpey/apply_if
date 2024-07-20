@@ -2,8 +2,8 @@
 [![CI](https://github.com/bavalpey/apply_if/actions/workflows/tests.yml/badge.svg)](https://github.com/bavalpey/apply_if/actions/workflows/tests.yml)
 
 ApplyIf supplies a trait with two methods: ``apply_if(cond, closure)`` and
-``apply_if_mut(cond,closure)``. Those applies the given closure
-on an instance if the condition is true, returning the original instance otherwise
+``apply_if_mut(cond, closure)``. These apply the given closure
+on an instance if `cond` is true, returning the original instance otherwise
 (or a reference in case of ``apply_if_mut``).  
 
 Very useful for both the immutable and the mutable builder patterns
