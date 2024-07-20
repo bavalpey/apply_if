@@ -1,8 +1,14 @@
-## ApplyIf
+# ApplyIf
+[![CI](https://github.com/bavalpey/apply_if/actions/workflows/tests.yml/badge.svg)](https://github.com/bavalpey/apply_if/actions/workflows/tests.yml)
 
-ApplyIf supplies a trait with one method: ``apply_if(cond, closure)``, that applies the closure
-on an object if the condition is true, returning the original object otherwise.  
-Very useful for the builder pattern when you want to keep the nice ``.builder1().builder2()`` 
-chain, and not interrupt it with if-else blocks.  
+ApplyIf supplies a trait with two methods: ``apply_if(cond, closure)`` and
+``apply_if_mut(cond,closure)``. Those applies the given closure
+on an instance if the condition is true, returning the original instance otherwise
+(or a reference in case of ``apply_if_mut``).  
 
-Comes with a blanket implementation for all sized types.
+Very useful for both the immutable and the mutable builder patterns
+when you want to keep the nice ``.builder1().builder2()`` chain, and not interrupt
+it with if-else blocks.  
+
+Comes with a blanket implementation for all types, where ``apply_if`` is only
+implemented for sized types.
