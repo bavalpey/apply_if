@@ -56,6 +56,20 @@ fn test_mutable_builder() {
             .build(),
         (0, 2)
     );
+    assert_eq!(
+        MutableBuilder::default()
+            .apply_if_some_mut(Some(100), |this, n| this.first(n))
+            .second(2)
+            .build(),
+        (100, 2)
+    );
+    assert_eq!(
+        MutableBuilder::default()
+            .apply_if_some_mut(None, |this, n| this.first(n))
+            .second(2)
+            .build(),
+        (0, 2)
+    );
 }
 
 #[test]
@@ -75,6 +89,20 @@ fn test_immutable_builder() {
     assert_eq!(
         ImmutableBuilder::default()
             .apply_if(false, |b| b.first(1))
+            .second(2)
+            .build(),
+        (0, 2)
+    );
+    assert_eq!(
+        ImmutableBuilder::default()
+            .apply_if_some(Some(100), |this, n| this.first(n))
+            .second(2)
+            .build(),
+        (100, 2)
+    );
+    assert_eq!(
+        ImmutableBuilder::default()
+            .apply_if_some(None, |this, n| this.first(n))
             .second(2)
             .build(),
         (0, 2)
