@@ -9,9 +9,9 @@ the nice chaining syntax.
 
 # Examples
 
-This example uses the [`derive_builder`](https://crates.io/crates/derive_builder)
-crate to derive a builder and then uses the `apply_if_...` functions to show
-how to conditionally invoke builder functions without breaking the chain.
+These examples use the [`derive_builder`](https://crates.io/crates/derive_builder)
+crate to create a builder and show how to use the `apply_if...` functions to
+conditionally invoke builder functions without breaking the chain.
 
 ## Mutable Builders
 
@@ -87,7 +87,7 @@ struct Value{
 }
 
 fn main () {
-    // apply_if_mut only applies the function
+    // apply_if only applies the function
     // if the condition is true
     let value = ValueBuilder::default()
         .apply_if(true, |builder| builder.first(100))
@@ -103,9 +103,8 @@ fn main () {
         .unwrap();
     assert_eq!(value, Value{first: 123, second: 1.337});
 
-    // apply_if_some_mut only applies the function
+    // apply_if_some only applies the function
     // if the optional contains a value
-    
     let value = ValueBuilder::default()
         .apply_if_some(Some(100), |builder,val| builder.first(val))
         .second(1.337)
