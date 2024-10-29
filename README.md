@@ -34,36 +34,36 @@ struct Value{
 fn main () {
     // apply_if_mut only applies the function
     // if the condition is true
-    let value1 = ValueBuilder::default()
+    let value = ValueBuilder::default()
         .apply_if_mut(true, |builder| builder.first(100))
         .second(1.337)
         .build()
         .unwrap();
-    assert_eq!(value1, Value{first: 100, second: 1.337});
+    assert_eq!(value, Value{first: 100, second: 1.337});
 
-    let value2 = ValueBuilder::default()
+    let value = ValueBuilder::default()
         .apply_if_mut(false, |builder| builder.first(100))
         .second(1.337)
         .build()
         .unwrap();
-    assert_eq!(value2, Value{first: 123, second: 1.337});
+    assert_eq!(value, Value{first: 123, second: 1.337});
 
     // apply_if_some_mut only applies the function
     // if the optional contains a value
     
-    let value3 = ValueBuilder::default()
+    let value = ValueBuilder::default()
         .apply_if_some_mut(Some(100), |builder,val| builder.first(val))
         .second(1.337)
         .build()
         .unwrap();
-    assert_eq!(value3, Value{first: 100, second: 1.337});
+    assert_eq!(value, Value{first: 100, second: 1.337});
 
-    let value3 = ValueBuilder::default()
+    let value = ValueBuilder::default()
         .apply_if_some_mut(None, |builder,val| builder.first(val))
         .second(1.337)
         .build()
         .unwrap();
-    assert_eq!(value3, Value{first: 123, second: 1.337});
+    assert_eq!(value, Value{first: 123, second: 1.337});
 }
 ```
 
@@ -89,35 +89,35 @@ struct Value{
 fn main () {
     // apply_if_mut only applies the function
     // if the condition is true
-    let value1 = ValueBuilder::default()
+    let value = ValueBuilder::default()
         .apply_if(true, |builder| builder.first(100))
         .second(1.337)
         .build()
         .unwrap();
-    assert_eq!(value1, Value{first: 100, second: 1.337});
+    assert_eq!(value, Value{first: 100, second: 1.337});
 
-    let value2 = ValueBuilder::default()
+    let value = ValueBuilder::default()
         .apply_if(false, |builder| builder.first(100))
         .second(1.337)
         .build()
         .unwrap();
-    assert_eq!(value2, Value{first: 123, second: 1.337});
+    assert_eq!(value, Value{first: 123, second: 1.337});
 
     // apply_if_some_mut only applies the function
     // if the optional contains a value
     
-    let value3 = ValueBuilder::default()
+    let value = ValueBuilder::default()
         .apply_if_some(Some(100), |builder,val| builder.first(val))
         .second(1.337)
         .build()
         .unwrap();
-    assert_eq!(value3, Value{first: 100, second: 1.337});
+    assert_eq!(value, Value{first: 100, second: 1.337});
 
-    let value3 = ValueBuilder::default()
+    let value = ValueBuilder::default()
         .apply_if_some(None, |builder,val| builder.first(val))
         .second(1.337)
         .build()
         .unwrap();
-    assert_eq!(value3, Value{first: 123, second: 1.337});
+    assert_eq!(value, Value{first: 123, second: 1.337});
 }
 ```
