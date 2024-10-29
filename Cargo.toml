@@ -1,6 +1,6 @@
 [package]
 name = "apply_if"
-version = "1.1.0"
+version = "1.2.0"
 license = "MIT OR Apache-2.0"
 description = "Conditionally apply a closure to an item or return it"
 repository = "https://github.com/bavalpey/apply_if"
