@@ -2,7 +2,7 @@
 
 [![CI](https://github.com/bavalpey/apply_if/actions/workflows/tests.yml/badge.svg)](https://github.com/bavalpey/apply_if/actions/workflows/tests.yml)
 
-This crates provides the functions `apply_if` and `apply_if_some` for consuming
+This crate provides the functions `apply_if` and `apply_if_some` for consuming
 builders, as well as `apply_if_mut` and `apply_if_some_mut` for mutable builder
 chains. They allow us to conditionally invoke builder functions while keeping
 the nice chaining syntax.
