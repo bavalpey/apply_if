@@ -1,0 +1,22 @@
+version = 1
+# SPDX-FileCopyrightText: 2024 Benjamin Valpey
+#
+# SPDX-License-Identifier: MIT OR Apache-2.0
+
+[[annotations]]
+path = ["src/*.rs", "Cargo.toml", ".github/**/*.yml"]
+SPDX-FileCopyrightText = "2024 ApplyIf contributors"
+SPDX-License-Identifier = "MIT OR Apache-2.0"
+
+
+[[annotations]]
+path = ["README.md"]
+SPDX-FileCopyrightText = "2024 ApplyIf contributors"
+SPDX-License-Identifier = "CC-BY-SA-4.0"
+
+
+# Generated files or those with no intellectual contribution are always licensed as CC0-1.0
+[[annotations]]
+path = [".gitignore", "CONTRIBUTORS"]
+SPDX-FileCopyrightText = "N/A"
+SPDX-License-Identifier = "CC0-1.0"
